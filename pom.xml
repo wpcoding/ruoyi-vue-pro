@@ -24,6 +24,9 @@
 <!--        <module>yudao-module-crm</module>-->
 <!--        <module>yudao-module-erp</module>-->
         <module>yudao-module-ai</module>
+        <module>yudao-module-vhr</module>
+        <module>yudao-module-vhr/yudao-module-vhr-api</module>
+        <module>yudao-module-vhr/yudao-module-vhr-biz</module>
     </modules>
 
     <name>${project.artifactId}</name>
