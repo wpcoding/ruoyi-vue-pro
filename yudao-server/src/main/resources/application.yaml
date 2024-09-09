@@ -247,7 +247,7 @@ yudao:
     db-schemas: ${spring.datasource.dynamic.datasource.master.name}
     front-type: 20 # 前端模版的类型，参见 CodegenFrontTypeEnum 枚举类
   tenant: # 多租户相关配置项
-    enable: true
+    enable: false
     ignore-urls:
       - /admin-api/system/tenant/get-id-by-name # 基于名字获取租户，不许带租户编号
       - /admin-api/system/tenant/get-by-website # 基于域名获取租户，不许带租户编号
@@ -258,6 +258,7 @@ yudao:
       - /admin-api/pay/notify/** # 支付回调通知，不携带租户编号
       - /jmreport/* # 积木报表，无法携带租户编号
       - /admin-api/mp/open/** # 微信公众号开放平台，微信回调接口，无法携带租户编号
+      - /admin-api/vhr/**
     ignore-tables:
       - system_tenant
       - system_tenant_package
@@ -300,6 +301,7 @@ yudao:
       - rep_demo_jianpiao
       - tmp_report_data_1
       - tmp_report_data_income
+      - vhr_dept
     ignore-caches:
       - user_role_ids
       - permission_menu_ids
